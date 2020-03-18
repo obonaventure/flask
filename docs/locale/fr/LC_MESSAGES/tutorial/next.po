@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 16:28+0100\n"
+"PO-Revision-Date: 2020-03-18 12:25+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: ../../tutorial/next.rst:2
+msgid "Keep Developing!"
+msgstr "Continuez à développer!"
+
+#: ../../tutorial/next.rst:4
+msgid ""
+"You've learned about quite a few Flask and Python concepts throughout "
+"the tutorial. Go back and review the tutorial and compare your code with "
+"the steps you took to get there. Compare your project to the :gh:"
+"`example project <examples/tutorial>`, which might look a bit different "
+"due to the step-by-step nature of the tutorial."
+msgstr ""
+"Vous avez appris pas mal de concepts liés à Flask et Python dans ce "
+"tutoriel. Retournez au début et comparez votre code avec les étapes qui "
+"vous ont amenées ici. Comparez votre projet avec :gh:`example project "
+"<examples/tutorial>`, qui pourrait être un peu différent à cause des "
+"différentes étapes du tutoriel."
+
+#: ../../tutorial/next.rst:10
+msgid ""
+"There's a lot more to Flask than what you've seen so far. Even so, "
+"you're now equipped to start developing your own web applications. Check "
+"out the :ref:`quickstart` for an overview of what Flask can do, then "
+"dive into the docs to keep learning. Flask uses `Jinja`_, `Click`_, "
+"`Werkzeug`_, and `ItsDangerous`_ behind the scenes, and they all have "
+"their own documentation too. You'll also be interested in :ref:"
+"`extensions` which make tasks like working with the database or "
+"validating form data easier and more powerful."
+msgstr ""
+"Flask contient plus de fonctionnalités que celles qu'on a pu aborder "
+"ici. Cela étant dit, vous êtes maintenant armé pour développer vos "
+"propres applications web. Consultez le document :ref:`quickstart` pour "
+"un résumé de ce que Flask peut faire et ensuite plongez vous dans la "
+"documentation pour continuer à apprendre. Flask s'appuie sur les "
+"librairies `Jinja`_, `Click`_, `Werkzeug`_, et `ItsDangerous`_ qui ont "
+"aussi leur propre documentation. Vous pourriez aussi être intéressé par "
+"les différentes ref:`extensions` qui peuvent vous faciliter des tâches "
+"telles qu'accéder à des bases de données ou valider des formulaires plus "
+"simplement et plus efficacement."
+
+#: ../../tutorial/next.rst:19
+msgid ""
+"If you want to keep developing your Flaskr project, here are some ideas "
+"for what to try next:"
+msgstr ""
+"Si vous souhaitez continuer à développer votre projet Flaskr, voici "
+"quelques suggestions pour de prochaines étapes:"
+
+#: ../../tutorial/next.rst:22
+msgid ""
+"A detail view to show a single post. Click a post's title to go to its "
+"page."
+msgstr ""
+"Une vue détaillée permettant de visualiser un seul message. Cliquez sur "
+"le titre d'un message pour visualiser sa page."
+
+#: ../../tutorial/next.rst:24
+msgid "Like / unlike a post."
+msgstr "Ajouter un bouton `j'aime`/`j'aime pas` sur un message."
+
+#: ../../tutorial/next.rst:25
+msgid "Comments."
+msgstr "Commentaires."
+
+#: ../../tutorial/next.rst:26
+msgid "Tags. Clicking a tag shows all the posts with that tag."
+msgstr ""
+"Etiquettes. En cliquant sur une étiquette, vous montrez tous les "
+"messages avec cette étiquette."
+
+#: ../../tutorial/next.rst:27
+msgid "A search box that filters the index page by name."
+msgstr ""
+"Une boîte de recherche permettant de filtrer la page d'index sur base "
+"d'un nom."
+
+#: ../../tutorial/next.rst:28
+msgid "Paged display. Only show 5 posts per page."
+msgstr "Une visualisation paginée. Montrez uniquement 5 messages par page."
+
+#: ../../tutorial/next.rst:29
+msgid "Upload an image to go along with a post."
+msgstr "Télécharger une image associée à un message."
+
+#: ../../tutorial/next.rst:30
+msgid "Format posts using Markdown."
+msgstr "Ecrire les messages en Markdown."
+
+#: ../../tutorial/next.rst:31
+msgid "An RSS feed of new posts."
+msgstr "Avoir un flux RSS pour les nouveaux messages."
+
+#: ../../tutorial/next.rst:33
+msgid "Have fun and make awesome applications!"
+msgstr "Amusez-vous et créez de superbes applications!"

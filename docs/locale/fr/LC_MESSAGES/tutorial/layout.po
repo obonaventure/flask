@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 16:28+0100\n"
+"PO-Revision-Date: 2020-03-15 17:40+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: ../../tutorial/layout.rst:2
+msgid "Project Layout"
+msgstr "Votre projet"
+
+#: ../../tutorial/layout.rst:4
+msgid "Create a project directory and enter it:"
+msgstr "Créez un répertoire pour votre projet et allez dans ce répertoire:"
+
+#: ../../tutorial/layout.rst:11
+msgid ""
+"Then follow the :doc:`installation instructions </installation>` to set up a "
+"Python virtual environment and install Flask for your project."
+msgstr ""
+"Ensuite suivez le document :doc:`installation instructions </installation>` "
+"pour créer un environnement virtual Python et installer Flask pour votre "
+"projet."
+
+#: ../../tutorial/layout.rst:14
+msgid ""
+"The tutorial will assume you're working from the ``flask-tutorial`` directory "
+"from now on. The file names at the top of each code block are relative to this "
+"directory."
+msgstr ""
+"Ce tutorial suppose que vous travaillez depuis un répertoire dénommé ``flask-"
+"tutorial``.  Les noms de fichiers spécifiés au-dessus de chaque bloc de code "
+"sont relatifs à ce répertoire."
+
+#: ../../tutorial/layout.rst:20
+msgid "A Flask application can be as simple as a single file."
+msgstr "Une application Flaks peut être aussi petite qu'un seul fichier."
+
+#: ../../tutorial/layout.rst:22
+msgid "``hello.py``"
+msgstr "``hello.py``"
+
+#: ../../tutorial/layout.rst:34
+msgid ""
+"However, as a project gets bigger, it becomes overwhelming to keep all the "
+"code in one file. Python projects use *packages* to organize code into "
+"multiple modules that can be imported where needed, and the tutorial will do "
+"this as well."
+msgstr ""
+"Cependant, lorsque le projet grandit, il devient plus difficile de garder "
+"l'ensemble du code dans un seul fichier. Les projets Python utilisent la "
+"notion de *package* pour organiser le code en différents modules qui peuvent "
+"être importés où ils sont nécessaires. Ce tutorial fera de même."
+
+#: ../../tutorial/layout.rst:39
+msgid "The project directory will contain:"
+msgstr "Le répertoire du projet contiendra:"
+
+#: ../../tutorial/layout.rst:41
+msgid "``flaskr/``, a Python package containing your application code and files."
+msgstr ""
+"``flaskr/``, un package Python contenant le code de votre application et les "
+"fichiers associés."
+
+#: ../../tutorial/layout.rst:43
+msgid "``tests/``, a directory containing test modules."
+msgstr "``test/``, un répertoire contenant les modules de test."
+
+#: ../../tutorial/layout.rst:44
+msgid ""
+"``venv/``, a Python virtual environment where Flask and other dependencies are "
+"installed."
+msgstr ""
+"``venv/``, un environnement virtuel Python où Flask et d'autres dépendances "
+"sont installés."
+
+#: ../../tutorial/layout.rst:46
+msgid "Installation files telling Python how to install your project."
+msgstr ""
+"Des fichiers d'installation qui indiquent à Python comment installer votre "
+"projet."
+
+#: ../../tutorial/layout.rst:47
+msgid ""
+"Version control config, such as `git`_. You should make a habit of using some "
+"type of version control for all your projects, no matter the size."
+msgstr ""
+"La configuration de votre système de contrôle de version tel que `git`_. Vous "
+"devriez prendre l'habitude d'utiliser un système de contrôle de version pour "
+"tous vos projets, quelle que soit leur taille."
+
+#: ../../tutorial/layout.rst:50
+msgid "Any other project files you might add in the future."
+msgstr "D'autres fichiers liés au projet que vous pourriez ajouter par après."
+
+#: ../../tutorial/layout.rst:54
+msgid "By the end, your project layout will look like this:"
+msgstr "A la fin, votre répertoire de projet devrait ressemble à:"
+
+#: ../../tutorial/layout.rst:87
+msgid ""
+"If you're using version control, the following files that are generated while "
+"running your project should be ignored. There may be other files based on the "
+"editor you use. In general, ignore files that you didn't write. For example, "
+"with git:"
+msgstr ""
+"Si vous utilisez un outil de contrôle de version, les fichiers suivants qui "
+"sont générés durant l'exécution de votre projet doivent être ignorés. Il peut "
+"y avoir d'autres fichiers en fonction de l'éditeur de textes que vous "
+"utilisez. En général, ignorez les fichiers que vous n'avez pas écrit vous-"
+"même. Par exemple, pour git cela donne:"
+
+#: ../../tutorial/layout.rst:92
+msgid "``.gitignore``"
+msgstr "``.gitignore``"
+
+#: ../../tutorial/layout.rst:110
+msgid "Continue to :doc:`factory`."
+msgstr "Continue en lisant le document :doc:`factory`."

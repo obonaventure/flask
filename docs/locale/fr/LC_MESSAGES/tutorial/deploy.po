@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 16:28+0100\n"
+"PO-Revision-Date: 2020-03-18 22:12+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: ../../tutorial/deploy.rst:2
+msgid "Deploy to Production"
+msgstr "Mise en production"
+
+#: ../../tutorial/deploy.rst:4
+msgid ""
+"This part of the tutorial assumes you have a server that you want to "
+"deploy your application to. It gives an overview of how to create the "
+"distribution file and install it, but won't go into specifics about what "
+"server or software to use. You can set up a new environment on your "
+"development computer to try out the instructions below, but probably "
+"shouldn't use it for hosting a real public application. See :doc:`/"
+"deploying/index` for a list of many different ways to host your "
+"application."
+msgstr ""
+"Cette partie du tutoriel suppose que vous avez un serveur sur lequel "
+"vous souhaitez déployer votre application. Elle présente comment créer "
+"un package distribuable mais ne rentre pas dans les détails des "
+"particularités du serveur ou du logiciel à utiliser. Vous pouvez créer "
+"un environnement sur votre ordinateur de développement pour essayer les "
+"instructions ci-dessous, mais probablement pas pour installer une "
+"application publique réelle. Voyez le document :doc:`/deploying/index` "
+"pour une liste des nombreuses façons de faire tourner votre application."
+
+#: ../../tutorial/deploy.rst:15
+msgid "Build and Install"
+msgstr "Installation"
+
+#: ../../tutorial/deploy.rst:17
+msgid ""
+"When you want to deploy your application elsewhere, you build a "
+"distribution file. The current standard for Python distribution is the "
+"*wheel* format, with the ``.whl`` extension. Make sure the wheel library "
+"is installed first:"
+msgstr ""
+"Pour mettre en production votre application ailleurs, vous devez créer "
+"un fichier distribuable. Le standard actuel pour ces fichiers "
+"distribuables en Python est le format *wheel* (extension ``.whl``). "
+"Assurez-vos d'abord d'avoir installé la librairie ``wheel``:"
+
+#: ../../tutorial/deploy.rst:26
+msgid ""
+"Running ``setup.py`` with Python gives you a command line tool to issue "
+"build-related commands. The ``bdist_wheel`` command will build a wheel "
+"distribution file."
+msgstr ""
+"En exécutant ``setup.py`` avec Python, vous avez un outil en ligne de "
+"commande qui vous permet de lancer certains commandes liées à la "
+"préparation de ces fichiers distribuables. La commande ``bdist_wheel`` "
+"va construire un fichier distribuable de type wheel."
+
+#: ../../tutorial/deploy.rst:34
+msgid ""
+"You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The "
+"file name is the name of the project, the version, and some tags about "
+"the file can install."
+msgstr ""
+"Vous pouvez trouver ce fichier dans ``dist/flaskr-1.0.0-py3-none-any."
+"whl``. Le nom du fichier est composé du nom du projet, de sa version et "
+"de certaines étiquettes relatives au programme à installer."
+
+#: ../../tutorial/deploy.rst:38
+msgid ""
+"Copy this file to another machine, :ref:`set up a new virtualenv "
+"<install-create-env>`, then install the file with ``pip``."
+msgstr ""
+"Copiez ce fichier sur un autre ordinateur, créez-y un nouvel "
+"environnement virtuel (voir :ref:`set up a new virtualenv <install-"
+"create-env>`) et puis installez le fichier en utilisant ``pip``."
+
+#: ../../tutorial/deploy.rst:46
+msgid "Pip will install your project along with its dependencies."
+msgstr "Pip va installer votre projet avec ses dépendances."
+
+#: ../../tutorial/deploy.rst:48
+msgid ""
+"Since this is a different machine, you need to run ``init-db`` again to "
+"create the database in the instance folder."
+msgstr ""
+"Comme vous êtes sur un autre ordinateur, vous devez relancer ``init-db`` "
+"pour créer la base de données dans le répertoire `instance folder`."
+
+#: ../../tutorial/deploy.rst:56
+msgid ""
+"When Flask detects that it's installed (not in editable mode), it uses a "
+"different directory for the instance folder. You can find it at ``venv/"
+"var/flaskr-instance`` instead."
+msgstr ""
+"Lorsque Flask détecte qu'il est installé dans un autre mode que le mode "
+"éditable, il utilise un autre répertoire pour l'`instance folder`. Vous "
+"pouvez le trouver dans ``venv/var/flaskr-instance``."
+
+#: ../../tutorial/deploy.rst:62
+msgid "Configure the Secret Key"
+msgstr "Configurez la clé secrète"
+
+#: ../../tutorial/deploy.rst:64
+msgid ""
+"In the beginning of the tutorial that you gave a default value for :data:"
+"`SECRET_KEY`. This should be changed to some random bytes in production. "
+"Otherwise, attackers could use the public ``'dev'`` key to modify the "
+"session cookie, or anything else that uses the secret key."
+msgstr ""
+"Au début de ce tutoriel, vous avez choisi une valeur par défaut pour :"
+"data:`SECRET_KEY`. Cette valeur doit être changée pour contenir une "
+"séquence aléatoire de bytes lors d'une mise en production. Sinon, des "
+"pirates pourraient utiliser la clé publique ``dev`` pour modifier le "
+"cookie de session ou n'importe quelle autre donnée qui utilise la clé "
+"secrète."
+
+#: ../../tutorial/deploy.rst:69
+msgid "You can use the following command to output a random secret key:"
+msgstr ""
+"Vous pouvez utiliser les commandes ci-dessous pour créer une clé secrète:"
+
+#: ../../tutorial/deploy.rst:77
+msgid ""
+"Create the ``config.py`` file in the instance folder, which the factory "
+"will read from if it exists. Copy the generated value into it."
+msgstr ""
+"Créez le fichier ``config.py`` dans l'`instance folder`. C'est là que "
+"l'usine à applications ira le lire si il existe. Copiez la valeur "
+"aléatoire générée dans ce fichier."
+
+#: ../../tutorial/deploy.rst:80
+msgid "``venv/var/flaskr-instance/config.py``"
+msgstr "``venv/var/flaskr-instance``"
+
+#: ../../tutorial/deploy.rst:85
+msgid ""
+"You can also set any other necessary configuration here, although "
+"``SECRET_KEY`` is the only one needed for Flaskr."
+msgstr ""
+"Vous pouvez aussi fixer d'autres paramètres de configuration ici, bien "
+"que ``SECRET_KEY`` soit le seul qui est vraiment nécessaire au "
+"fonctionnement de Flaskr."
+
+#: ../../tutorial/deploy.rst:90
+msgid "Run with a Production Server"
+msgstr "Exécution sur un serveur en production"
+
+#: ../../tutorial/deploy.rst:92
+msgid ""
+"When running publicly rather than in development, you should not use the "
+"built-in development server (``flask run``). The development server is "
+"provided by Werkzeug for convenience, but is not designed to be "
+"particularly efficient, stable, or secure."
+msgstr ""
+"Lorsque votre application tourne sur un serveur de production et non un "
+"serveur de développement, n'utilisez pas ``flask run``. Le serveur de "
+"développement est fourni par Werkzeug pour votre facilité, mais il n'est "
+"ni particulièrement stable, ni efficace si sûr."
+
+#: ../../tutorial/deploy.rst:97
+msgid ""
+"Instead, use a production WSGI server. For example, to use `Waitress`_, "
+"first install it in the virtual environment:"
+msgstr ""
+"Utilisez plutôt un serveur WSGI de production. Par exemple, pour "
+"utiliser `Waitress`_, installez-le d'abord dans un environnement virtuel:"
+
+#: ../../tutorial/deploy.rst:104
+msgid ""
+"You need to tell Waitress about your application, but it doesn't use "
+"``FLASK_APP`` like ``flask run`` does. You need to tell it to import and "
+"call the application factory to get an application object."
+msgstr ""
+"You devez indiquer à Waitress la présence de votre application, mais "
+"celui-ci n'utilise pas la variable d'environnement contrairement à "
+"``flask run``. Vous devez lui dire de l'importer et d'appeler l'usine à "
+"applications pour obtenir un objet application."
+
+#: ../../tutorial/deploy.rst:114
+msgid ""
+"See :doc:`/deploying/index` for a list of many different ways to host "
+"your application. Waitress is just an example, chosen for the tutorial "
+"because it supports both Windows and Linux. There are many more WSGI "
+"servers and deployment options that you may choose for your project."
+msgstr ""
+"Lisez le document :doc:`/deploying/index` pour voir les nombreuses "
+"façons de déployer votre application. Waitress est juste un exemple "
+"choisi pour ce tutoriel car il fonctionne sur Windows et Linux. Il y a "
+"de nombreux autres serveurs et d'autres options de déploiement que vous "
+"pouvez choisir pour votre projet."
+
+#: ../../tutorial/deploy.rst:121
+msgid "Continue to :doc:`next`."
+msgstr "Poursuivez en lisant le document :doc:`next`."

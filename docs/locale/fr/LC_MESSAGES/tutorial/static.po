@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 16:28+0100\n"
+"PO-Revision-Date: 2020-03-18 12:12+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: ../../tutorial/static.rst:2
+msgid "Static Files"
+msgstr "Fichiers statiques"
+
+#: ../../tutorial/static.rst:4
+msgid ""
+"The authentication views and templates work, but they look very plain "
+"right now. Some `CSS`_ can be added to add style to the HTML layout you "
+"constructed. The style won't change, so it's a *static* file rather than "
+"a template."
+msgstr ""
+"Les vues authentification et templates fonctionnent, mais elles sont "
+"très basiques à ce stade. Il est possible d'y ajouter du `CSS`_ de façon "
+"à améliorer la mise en forme de vos pages HTML. Comme ce style ne "
+"changera pas, il sera stocké comme un fichier *statique* plutôt qu'en "
+"utilisant un template."
+
+#: ../../tutorial/static.rst:9
+msgid ""
+"Flask automatically adds a ``static`` view that takes a path relative to "
+"the ``flaskr/static`` directory and serves it. The ``base.html`` "
+"template already has a link to the ``style.css`` file:"
+msgstr ""
+"Flask ajoute automatiquement une vue ``static``qui prend un chemin "
+"relatif au répertoire ``flaskr/static`` et sert les fichiers qui s'y "
+"trouvent. Le template ``base.html`` contient déjà un lien vers le "
+"fichier ``style.css``:"
+
+#: ../../tutorial/static.rst:17
+msgid ""
+"Besides CSS, other types of static files might be files with JavaScript "
+"functions, or a logo image. They are all placed under the ``flaskr/"
+"static`` directory and referenced with ``url_for('static', "
+"filename='...')``."
+msgstr ""
+"Outre le CSS, les autres types de fichiers statiques pourraient être les "
+"fichiers contenant des fonctions JavaScript ou des images et logos. Ils "
+"sont tous placés dans le répertoire ``flaskr/static`` et référéncés en "
+"utilisant  ``url_for('static', filename='...')``."
+
+#: ../../tutorial/static.rst:22
+msgid ""
+"This tutorial isn't focused on how to write CSS, so you can just copy "
+"the following into the ``flaskr/static/style.css`` file:"
+msgstr ""
+"Ce tutoriel n'a pas comme objectif de vous apprendre à écrire du CSS, "
+"copiez simplement le fichier ci-dessous dans ``flaskr/static/style.css``:"
+
+#: ../../tutorial/static.rst:25
+msgid "``flaskr/static/style.css``"
+msgstr "``flaskr/static/style.css``"
+
+#: ../../tutorial/static.rst:55
+msgid ""
+"You can find a less compact version of ``style.css`` in the :gh:`example "
+"code <examples/tutorial/flaskr/static/style.css>`."
+msgstr ""
+"Vous pouvez trouver une version moins compacte de ``style.css`` dans le "
+"fichier :gh:`example code <examples/tutorial/flaskr/static/style.css>`."
+
+#: ../../tutorial/static.rst:58
+msgid ""
+"Go to http://127.0.0.1:5000/auth/login and the page should look like the "
+"screenshot below."
+msgstr ""
+"Si vous allez sur http://127.0.0.1:5000/auth/login, la page devrait "
+"ressembler à la capture d'écran ci-dessous."
+
+#: ../../tutorial/static.rst:66
+msgid ""
+"You can read more about CSS from `Mozilla's documentation <CSS_>`_. If "
+"you change a static file, refresh the browser page. If the change "
+"doesn't show up, try clearing your browser's cache."
+msgstr ""
+"Vous trouverez plus d'informations sur CSS dans `Mozilla's documentation "
+"<CSS_>`_. Si vous changez un fichier statique, rafraîchissez la page de "
+"votre navigateur. Si le changement n'a pas d'effet, essayer de vider la "
+"cache de votre navigateur."
+
+#: ../../tutorial/static.rst:72
+msgid "Continue to :doc:`blog`."
+msgstr "Continuez en lisant le document :doc:`blog`."

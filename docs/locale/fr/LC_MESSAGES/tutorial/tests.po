@@ -1,0 +1,542 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 16:28+0100\n"
+"PO-Revision-Date: 2020-03-18 21:52+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: ../../tutorial/tests.rst:4
+msgid "Test Coverage"
+msgstr "Couverture des tests"
+
+#: ../../tutorial/tests.rst:6
+msgid ""
+"Writing unit tests for your application lets you check that the code you "
+"wrote works the way you expect. Flask provides a test client that simulates "
+"requests to the application and returns the response data."
+msgstr ""
+"En écrivant des tests unitaires pour votre application, vous vérifiez que le "
+"code que vous avez écrit fonctionne comme vous le pensez. Flask comprend un "
+"client qui simule les requêtes faites à l'application et retourne les "
+"informations contenues dans les réponses."
+
+#: ../../tutorial/tests.rst:10
+msgid ""
+"You should test as much of your code as possible. Code in functions only "
+"runs when the function is called, and code in branches, such as ``if`` "
+"blocks, only runs when the condition is met. You want to make sure that each "
+"function is tested with data that covers each branch."
+msgstr ""
+"Vous devriez tester votre code le plus possible. Le code d'une fonction "
+"n'est exécuté que lorsque cette fonction est appelée et le code qui se "
+"trouve dans des branches, comme les instructions conditionnelles, ne "
+"s'exécute que lorsque la condition est vérifiée. Vous devez vous organiser "
+"pour que chaque fonction soit testée avec des données qui permettent "
+"d'exercer toutes ses branches."
+
+#: ../../tutorial/tests.rst:15
+#, fuzzy, python-format
+msgid ""
+"The closer you get to 100% coverage, the more comfortable you can be that "
+"making a change won't unexpectedly change other behavior. However, "
+"100% coverage doesn't guarantee that your application doesn't have bugs. In "
+"particular, it doesn't test how the user interacts with the application in "
+"the browser. Despite this, test coverage is an important tool to use during "
+"development."
+msgstr ""
+"Plus vous vous rapprochez d'une couverture à 100 pourcent plus vous serez "
+"confiant qu'un changement que vous introduisez n'aura pas d'impact sur le "
+"comportement de l'application. Cependant, une couverture à 100 pourcent ne "
+"garantit pas l'absence de bugs dans votre application. En particulier, cela "
+"ne teste pas comment l'utilisateur interagit avec votre application depuis "
+"son navigateur. Cela étant, la couverture des tests est un outil important à "
+"utiliser dans le développement de logiciels."
+
+#: ../../tutorial/tests.rst:23
+msgid ""
+"This is being introduced late in the tutorial, but in your future projects "
+"you should test as you develop."
+msgstr ""
+"Les tests sont introduits assez tardivement dans le tutoriel, mais dans vos "
+"projets futurs, vous devriez écrire les tests en parallèle avec le code que "
+"vous développez."
+
+#: ../../tutorial/tests.rst:26
+msgid ""
+"You'll use `pytest`_ and `coverage`_ to test and measure your code. Install "
+"them both:"
+msgstr ""
+"Vous utiliserez `pytest`_ et `coverage`_ pour tester et mesurer votre code. "
+"Installez les tous les deux:"
+
+#: ../../tutorial/tests.rst:38
+msgid "Setup and Fixtures"
+msgstr "Configuration et agencements"
+
+#: ../../tutorial/tests.rst:40
+msgid ""
+"The test code is located in the ``tests`` directory. This directory is *next "
+"to* the ``flaskr`` package, not inside it. The ``tests/conftest.py`` file "
+"contains setup functions called *fixtures* that each test will use. Tests "
+"are in Python modules that start with ``test_``, and each test function in "
+"those modules also starts with ``test_``."
+msgstr ""
+"Le code de vos tests se trouve dans le répertoire ``tests``. Ce répertoire "
+"est *juste à côte* du package ``flaskr`` mais en dehors de celui-ci. Le "
+"fichier ``tests/conftest.py`` contient les fonctions de configurations "
+"appelées *fixtures* que chaque test utilise. En Python, les tests sont des "
+"modules dont le nom commence par ``test_``."
+
+#: ../../tutorial/tests.rst:47
+#, fuzzy
+msgid ""
+"Each test will create a new temporary database file and populate some data "
+"that will be used in the tests. Write a SQL file to insert that data."
+msgstr ""
+"Chaque test va créer une base de données temporaire et y placer certaines "
+"données qui seront utilisées durant les tests. Créez un fichier SQL pour "
+"insérer ces données."
+
+#: ../../tutorial/tests.rst:51
+msgid "``tests/data.sql``"
+msgstr "``tests/data.sql``"
+
+#: ../../tutorial/tests.rst:63
+msgid ""
+"The ``app`` fixture will call the factory and pass ``test_config`` to "
+"configure the application and database for testing instead of using your "
+"local development configuration."
+msgstr ""
+"La fixture ``app`` va appeler l'usine à applications et lui passer "
+"l'argument ``test_config`` pour configurer l'application et la base de "
+"données pour réaliser des tests plutôt que d'utiliser la configuration de "
+"votre environnement de développement."
+
+#: ../../tutorial/tests.rst:67 ../../tutorial/tests.rst:226
+msgid "``tests/conftest.py``"
+msgstr "``tests/conftest.py``"
+
+#: ../../tutorial/tests.rst:109
+msgid ""
+":func:`tempfile.mkstemp` creates and opens a temporary file, returning the "
+"file object and the path to it. The ``DATABASE`` path is overridden so it "
+"points to this temporary path instead of the instance folder. After setting "
+"the path, the database tables are created and the test data is inserted. "
+"After the test is over, the temporary file is closed and removed."
+msgstr ""
+"La fonction :func:`tempfile.mkstemp` crée et ouvre un fichier temporaire et "
+"retourne un objet file et le chemin correspondant. Le chemin ``DATABASE`` "
+"est remplacé de façon à ce qu'il pointe vers ce répertoire temporaire plutôt "
+"que l'instance folder. Après avoir fixé ce chemin, les tables de la base de "
+"données sont créées et les données de test sont insérées. Après la fin du "
+"test, le fichier temporaire est fermé et supprimé."
+
+#: ../../tutorial/tests.rst:116
+msgid ""
+":data:`TESTING` tells Flask that the app is in test mode. Flask changes some "
+"internal behavior so it's easier to test, and other extensions can also use "
+"the flag to make testing them easier."
+msgstr ""
+":data:`TESTING` indique à Flask que l'application est en mode test. Flask "
+"change son fonctionnement interne de façon à simplifier les tests et des "
+"extensions peuvent aussi faire de même pour simplifier ces tests."
+
+#: ../../tutorial/tests.rst:120
+msgid ""
+"The ``client`` fixture calls :meth:`app.test_client() <Flask.test_client>` "
+"with the application object created by the ``app`` fixture. Tests will use "
+"the client to make requests to the application without running the server."
+msgstr ""
+"La fixture ``client`` appelle :meth:`app.test_client() <Flask.test_client>` "
+"avec l'objet application créé par la fixture ``app`. Les tests utiliseront "
+"le client pour faire des requêtes à l'application sans devoir exécuter le "
+"serveur."
+
+#: ../../tutorial/tests.rst:125
+msgid ""
+"The ``runner`` fixture is similar to ``client``. :meth:`app."
+"test_cli_runner() <Flask.test_cli_runner>` creates a runner that can call "
+"the Click commands registered with the application."
+msgstr ""
+"La fixture ``runner`` est similaire à celle du ``client``.  :meth:`app."
+"test_cli_runner() <Flask.test_cli_runner>` crée un runner qui peut lancer "
+"les commandes Click enregistrées avec l'application."
+
+#: ../../tutorial/tests.rst:129
+msgid ""
+"Pytest uses fixtures by matching their function names with the names of "
+"arguments in the test functions. For example, the ``test_hello`` function "
+"you'll write next takes a ``client`` argument. Pytest matches that with the "
+"``client`` fixture function, calls it, and passes the returned value to the "
+"test function."
+msgstr ""
+"Pytest utilise des fixtures en mettant en correspondance les noms des "
+"fonctions avec les noms des arguments des fonctions de test. Par exemple, la "
+"fonction ``test_hello`` que vous aller écrire bientôt prend comme argument "
+"un ``client``. Pytest met cela en correspondance avec la fonction fixture "
+"``client`` et passe les valeurs retournées à la fonction de test."
+
+#: ../../tutorial/tests.rst:137
+msgid "Factory"
+msgstr "Usine à applications"
+
+#: ../../tutorial/tests.rst:139
+msgid ""
+"There's not much to test about the factory itself. Most of the code will be "
+"executed for each test already, so if something fails the other tests will "
+"notice."
+msgstr ""
+"Il n'y a pas grand chose de spécifique à tester dans l'usine à applications "
+"elle-même. La plupart de son code sera exécuté pour chaque test de toute "
+"façon. Si une partie de cette fonction est erronée, d'autres tests le "
+"détecteront."
+
+#: ../../tutorial/tests.rst:143
+msgid ""
+"The only behavior that can change is passing test config. If config is not "
+"passed, there should be some default configuration, otherwise the "
+"configuration should be overridden."
+msgstr ""
+"La seul comportement qui peut changer est la réussite du test de "
+"configuration. Si celui-ci ne passe pas, il devrait y avoir une "
+"configuration par défaut, sinon la configuration devrait être écrasée."
+
+#: ../../tutorial/tests.rst:147
+msgid "``tests/test_factory.py``"
+msgstr "``tests/test_factory.py``"
+
+#: ../../tutorial/tests.rst:162
+msgid ""
+"You added the ``hello`` route as an example when writing the factory at the "
+"beginning of the tutorial. It returns \"Hello, World!\", so the test checks "
+"that the response data matches."
+msgstr ""
+"Vous avez ajouté la route ``hello`` comme exemple en écrivant l'usine à "
+"applications au début de ce tutoriel. Cette fonction retourne \"Hello, World!"
+"\" et donc le test vérifie que la réponse contient cette chaîne de "
+"caractères."
+
+#: ../../tutorial/tests.rst:168
+msgid "Database"
+msgstr "Base de données"
+
+#: ../../tutorial/tests.rst:170
+msgid ""
+"Within an application context, ``get_db`` should return the same connection "
+"each time it's called. After the context, the connection should be closed."
+msgstr ""
+"Dans le contexte d'une application, ``get_db`` doit retourner la même "
+"connexion chaque fois qu'elle est appelé. Après l'arrêt de ce contexte, la "
+"connexion doit être fermée."
+
+#: ../../tutorial/tests.rst:174 ../../tutorial/tests.rst:196
+msgid "``tests/test_db.py``"
+msgstr "``tests/test_db.py``"
+
+#: ../../tutorial/tests.rst:193
+msgid ""
+"The ``init-db`` command should call the ``init_db`` function and output a "
+"message."
+msgstr ""
+"La commande ``init-db`` devrait appeler la fonction ``init_db`` et afficher "
+"un message."
+
+#: ../../tutorial/tests.rst:211
+msgid ""
+"This test uses Pytest's ``monkeypatch`` fixture to replace the ``init_db`` "
+"function with one that records that it's been called. The ``runner`` fixture "
+"you wrote above is used to call the ``init-db`` command by name."
+msgstr ""
+"Ce test utilise la fixture ``monkeypatch`` de Pytest pour remplacer la "
+"fonction ``init_db`` par une fonction qui enregistre qu'elle a été appelée. "
+"La fixture ``runner`` que vous avez écrit ci-dessus est utilisée pour "
+"appeler la commande ``init-db`` en utilisant son nom."
+
+#: ../../tutorial/tests.rst:218
+msgid "Authentication"
+msgstr "Authentification"
+
+#: ../../tutorial/tests.rst:220
+msgid ""
+"For most of the views, a user needs to be logged in. The easiest way to do "
+"this in tests is to make a ``POST`` request to the ``login`` view with the "
+"client. Rather than writing that out every time, you can write a class with "
+"methods to do that, and use a fixture to pass it the client for each test."
+msgstr ""
+"Pour la plupart des vues, un utilisateur doit être connecté. La façon la "
+"plus simple de faire cela dans les tests est de faire une requête ``POST`` à "
+"la vue ``login`` avec le client. Plutôt que d'écrire cela à chaque fois, "
+"vous pouvez écrire une classe contenant des méthodes qui font cela et "
+"utiliser une fixture pour la passer au client pour chaque test."
+
+#: ../../tutorial/tests.rst:247
+msgid ""
+"With the ``auth`` fixture, you can call ``auth.login()`` in a test to log in "
+"as the ``test`` user, which was inserted as part of the test data in the "
+"``app`` fixture."
+msgstr ""
+"Avec la fixture ``auth``, vous pouvez appeler ``auth.login()`` dans un test "
+"pour vous connecter comme l'utilisateur ``test`` qui a été inséré dans les "
+"données de test à l'intérieur de la fixture  ``app``."
+
+#: ../../tutorial/tests.rst:251
+msgid ""
+"The ``register`` view should render successfully on ``GET``. On ``POST`` "
+"with valid form data, it should redirect to the login URL and the user's "
+"data should be in the database. Invalid data should display error messages."
+msgstr ""
+"La vue ``register`` doit retourner un bon rendu pour les requêtes ``GET``. "
+"Pour une requête ``POST`` avec des données valides, elle doit rediriger vers "
+"l'URL de login et les données de l'utilisateur doivent être dans la base de "
+"données. Des données invalides doivent provoquer l'affichage des messages "
+"d'erreur."
+
+#: ../../tutorial/tests.rst:256 ../../tutorial/tests.rst:316
+#: ../../tutorial/tests.rst:345
+msgid "``tests/test_auth.py``"
+msgstr "``tests/test_auth.py``"
+
+#: ../../tutorial/tests.rst:289
+msgid ""
+":meth:`client.get() <werkzeug.test.Client.get>` makes a ``GET`` request and "
+"returns the :class:`Response` object returned by Flask. Similarly, :meth:"
+"`client.post() <werkzeug.test.Client.post>` makes a ``POST`` request, "
+"converting the ``data`` dict into form data."
+msgstr ""
+"La fonction :meth:`client.get() <werkzeug.test.Client.get>` fait une requête "
+"``GET`` et retourne l'objet :class:`Response` retourné par Flask. De la même "
+"façon, :meth:`client.post() <werkzeug.test.Client.post>`  fait une requête "
+"``POST`` et convertit le dictionnaire ``data`` dans les données du "
+"formulaire."
+
+#: ../../tutorial/tests.rst:294
+msgid ""
+"To test that the page renders successfully, a simple request is made and "
+"checked for a ``200 OK`` :attr:`~Response.status_code`. If rendering failed, "
+"Flask would return a ``500 Internal Server Error`` code."
+msgstr ""
+"Pour vérifier si le rendu d'une page est correct, une requête simple est "
+"faite et on vérifie qu'elle retourne ``200 OK`` :attr:`~Response."
+"status_code`. Si le rendu échoue, Flask retourne le code d'erreur ``500 "
+"Internal Server Error``."
+
+#: ../../tutorial/tests.rst:299
+msgid ""
+":attr:`~Response.headers` will have a ``Location`` header with the login URL "
+"when the register view redirects to the login view."
+msgstr ""
+":attr:`~Response.headers` contiendra un ``Location`` header contenant l'URL "
+"de login lorsque la vue register redirige vers la vue de login."
+
+#: ../../tutorial/tests.rst:302
+msgid ""
+":attr:`~Response.data` contains the body of the response as bytes. If you "
+"expect a certain value to render on the page, check that it's in ``data``. "
+"Bytes must be compared to bytes. If you want to compare Unicode text, use :"
+"meth:`get_data(as_text=True) <werkzeug.wrappers.BaseResponse.get_data>` "
+"instead."
+msgstr ""
+":attr:`~Response.data`  contient le body de la réponse comme une suite de "
+"bytes. Si vous vous attendez à ce qu'une certain valeur s'affiche sur la "
+"page, vérifiez qu'elle est présente dans ` data``. Les bytes doivent être "
+"comparées à des bytes. Si vous voulez comparer du texte en format Unicode, "
+"utilisez plutôt :meth:`get_data(as_text=True) <werkzeug.wrappers."
+"BaseResponse.get_data>`."
+
+#: ../../tutorial/tests.rst:308
+msgid ""
+"``pytest.mark.parametrize`` tells Pytest to run the same test function with "
+"different arguments. You use it here to test different invalid input and "
+"error messages without writing the same code three times."
+msgstr ""
+"``pytest.mark.parametrize`` demande à Pytest de lancer la même fonction de "
+"test avec des arguments différents. Vous l'utilisez ici pour tester des "
+"entrées invalides et les messages d'erreur correspondants sans écrire le "
+"même code trois fois."
+
+#: ../../tutorial/tests.rst:312
+msgid ""
+"The tests for the ``login`` view are very similar to those for ``register``. "
+"Rather than testing the data in the database, :data:`session` should have "
+"``user_id`` set after logging in."
+msgstr ""
+"Les tests pour la vue ``login`` sont très proches de ceux de la vue "
+"``register``. Plutôt que de tester les données dans la base de données, :"
+"data:`session` devrait avoir son ``user_id`` initialisé après que "
+"l'utilisateur se soit connecté."
+
+#: ../../tutorial/tests.rst:338
+msgid ""
+"Using ``client`` in a ``with`` block allows accessing context variables such "
+"as :data:`session` after the response is returned. Normally, accessing "
+"``session`` outside of a request would raise an error."
+msgstr ""
+"L'avantage d'utiliser ``client`` dans un bloc ``with`` est qu'il est "
+"possible d'accéder à des variables de contexte telles que :data:`session` "
+"après que la réponse aie été retournée. Normalement, l'accès à une "
+"``session`` en dehors d'une requête devrait provoquer une erreur."
+
+#: ../../tutorial/tests.rst:342
+msgid ""
+"Testing ``logout`` is the opposite of ``login``. :data:`session` should not "
+"contain ``user_id`` after logging out."
+msgstr ""
+"Le test de l'opération de ``logout``est l'opposé de celui du ``login``. :"
+"data:`session` ne devrait pas contenir de ``user_id`` après une fin de "
+"connexion."
+
+#: ../../tutorial/tests.rst:357
+msgid "Blog"
+msgstr "Blog"
+
+#: ../../tutorial/tests.rst:359
+msgid ""
+"All the blog views use the ``auth`` fixture you wrote earlier. Call ``auth."
+"login()`` and subsequent requests from the client will be logged in as the "
+"``test`` user."
+msgstr ""
+"Toutes les vues du blog utilisent la fixture ``auth`` que vous avez écrit "
+"précédemment. Appelez ``auth.login()`` et les requềtes faites après par le "
+"client seront faites par l'utilisateur ``test``."
+
+#: ../../tutorial/tests.rst:363
+msgid ""
+"The ``index`` view should display information about the post that was added "
+"with the test data. When logged in as the author, there should be a link to "
+"edit the post."
+msgstr ""
+"La vue ``index`` devrait afficher de l'information à propos du message "
+"ajouté avec l'information correcte. En étant connecté en tant qu'auteur, il "
+"devrait y avoir un lien permettant d'éditer ce message."
+
+#: ../../tutorial/tests.rst:367
+msgid ""
+"You can also test some more authentication behavior while testing the "
+"``index`` view. When not logged in, each page shows links to log in or "
+"register. When logged in, there's a link to log out."
+msgstr ""
+"Vous pouvez aussi tester d'autres comportements liés à l'authentification en "
+"testant la vue ``index``. En n'étant pas connecté, chaque page doit contenir "
+"un lien pour se connecter et un autre pour s'enregistrer. En étant connecté, "
+"chaque page doit contenir un lien pour se déconnecter."
+
+#: ../../tutorial/tests.rst:371 ../../tutorial/tests.rst:397
+#: ../../tutorial/tests.rst:439 ../../tutorial/tests.rst:476
+msgid "``tests/test_blog.py``"
+msgstr "``tests/test_blog.py``"
+
+#: ../../tutorial/tests.rst:391
+msgid ""
+"A user must be logged in to access the ``create``, ``update``, and "
+"``delete`` views. The logged in user must be the author of the post to "
+"access ``update`` and ``delete``, otherwise a ``403 Forbidden`` status is "
+"returned. If a ``post`` with the given ``id`` doesn't exist, ``update`` and "
+"``delete`` should return ``404 Not Found``."
+msgstr ""
+"Un utilisateur doit être connecté pour accéder aux vues  ``create``, "
+"``update``, et ``delete``. L'utilisateur connecté doit être l'auteur du "
+"message pour pouvoir accéder à ``update`` et ``delete``. Sinon, une erreur "
+"``403 Forbidden`` doit être retournée. Si le ``post`` ayant l'identifiant "
+"``id`` n'existe pas, alors ``update`` et ``delete`` doivent retourner ``404 "
+"Not Found``."
+
+#: ../../tutorial/tests.rst:433
+msgid ""
+"The ``create`` and ``update`` views should render and return a ``200 OK`` "
+"status for a ``GET`` request. When valid data is sent in a ``POST`` request, "
+"``create`` should insert the new post data into the database, and ``update`` "
+"should modify the existing data. Both pages should show an error message on "
+"invalid data."
+msgstr ""
+"Les vues ``create`` et ``update`` doivent retourner une page et un statut "
+"``200 OK`` pour une requête ``GET``. Lorsqu'un donnée valide est envoyée "
+"dans une requête ``POST``,  ``create`` doit insérer la donnée de la requête "
+"dans la base de données et ``update`` doit mettre à jour l'information déjà "
+"présente. Ces deux pages doivent afficher un message d'erreur si les données "
+"sont invalides."
+
+#: ../../tutorial/tests.rst:473
+msgid ""
+"The ``delete`` view should redirect to the index URL and the post should no "
+"longer exist in the database."
+msgstr ""
+"La vue ``delete`` devrait rediriger vers l'URL de l'index et le message ne "
+"devrait plus exister dans la base de données."
+
+#: ../../tutorial/tests.rst:491
+msgid "Running the Tests"
+msgstr "Exécution des tests"
+
+#: ../../tutorial/tests.rst:493
+msgid ""
+"Some extra configuration, which is not required but makes running tests with "
+"coverage less verbose, can be added to the project's ``setup.cfg`` file."
+msgstr ""
+"Une configuration supplémentaire, mais qui n'est pas requise pour "
+"l'exécution des tests, mais rend leur exécution moins verbeuse, peut être "
+"ajoutée dans le fichier ``setup.cfg`` du projet."
+
+#: ../../tutorial/tests.rst:497
+msgid "``setup.cfg``"
+msgstr "``setup.cfg``"
+
+#: ../../tutorial/tests.rst:508
+msgid ""
+"To run the tests, use the ``pytest`` command. It will find and run all the "
+"test functions you've written."
+msgstr ""
+"Pour exécuter les tests, utilisez la commande ``pytest``. Elle trouvera et "
+"exécutera toutes les fonctions de test que vous avez écrites."
+
+#: ../../tutorial/tests.rst:527
+msgid ""
+"If any tests fail, pytest will show the error that was raised. You can run "
+"``pytest -v`` to get a list of each test function rather than dots."
+msgstr ""
+"Si un test échoue, Pytest affichera l'erreur. Vous pouvez utiliser ``pytest -"
+"v`` pour lister chaque fonction de test plutôt que de voir des points."
+
+#: ../../tutorial/tests.rst:530
+msgid ""
+"To measure the code coverage of your tests, use the ``coverage`` command to "
+"run pytest instead of running it directly."
+msgstr ""
+"Pour mesurer la couverture de vos tests, utilisez la commande ``coverage`` "
+"pour lancer pytest plutôt que de le lancer directement."
+
+#: ../../tutorial/tests.rst:537
+msgid "You can either view a simple coverage report in the terminal:"
+msgstr ""
+"Vous pouvez soit voir un rapport de couverture simple dans le terminal:"
+
+#: ../../tutorial/tests.rst:552
+msgid "An HTML report allows you to see which lines were covered in each file:"
+msgstr ""
+"Un rapport HTML vous permet de voir les lignes qui sont couvertes par les "
+"tests dans chaque fichier:"
+
+#: ../../tutorial/tests.rst:558
+msgid ""
+"This generates files in the ``htmlcov`` directory. Open ``htmlcov/index."
+"html`` in your browser to see the report."
+msgstr ""
+"Ceci génère des fichiers dans le répertoire ``htmlcov``. Ouvrez le fichier "
+"``htmlcov/index.html`` dans votre navigateur pour voir le rapport."
+
+#: ../../tutorial/tests.rst:561
+msgid "Continue to :doc:`deploy`."
+msgstr "Continuez en lisant le :doc:`deploy`."
